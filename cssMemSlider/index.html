@@ -9,9 +9,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Chewy&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alice&display=swap" rel="stylesheet">
 </head>
 
 <body>
+    <div class="warning">
+        <p>Пожалуйста, загляните сюда в последний день Cross Check. Мне нужно чуть больше времени, чтобы реализовать то, что я хочу реализовать. Заранее спасибо!</p>
+    </div>
+
         <header>
             <p>Mem Slider</p>
         </header>
@@ -19,15 +26,23 @@
         <main>
             <div class="slider-container">
                 <div class="mem-container">
-
+                    <img src="./assets/mems/mem0.jpg" alt="Alternate Text" />
                 </div>
                 <div class="controls-container">
                     <p class="description">Description</p>
                     <div class="controls-box">
-                        <input type="radio" id="mem1" name="mem-number" checked>
-                        <input type="radio" id="mem2" name="mem-number">
-                        <input type="radio" id="mem3" name="mem-number">
-                        <input type="radio" id="mem4" name="mem-number">
+                        <label class="mem1">
+                            <input type="radio" id="mem1" name="mem-number" checked>
+                        </label>
+                        <label class="mem2">
+                            <input type="radio" id="mem2" name="mem-number">
+                        </label>
+                        <label class="mem3">
+                            <input type="radio" id="mem3" name="mem-number">
+                        </label>
+                        <label class="mem4">
+                            <input type="radio" id="mem4" name="mem-number">
+                        </label>
                     </div>
                 </div>
             </div>

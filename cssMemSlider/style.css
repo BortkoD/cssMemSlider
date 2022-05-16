@@ -1,11 +1,15 @@
 html {
     scroll-behavior: smooth;
     background-color: #181f39;
+    background-image: url(./assets/meme-background.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 * {
     margin: auto;
     font-family: 'Chewy', cursive;
+    transition: 0.3s;
 }
 
 header {
@@ -17,7 +21,7 @@ header {
         width: fit-content;
         margin: auto;
         margin-top: 20px;
-        color: #d98201;
+        color: #a6bad7;
         font-size: 36px;
     }
 
@@ -27,17 +31,23 @@ main {
 }
 
 .slider-container {
-    height: 60vh;
-    width: 80vw;
+    height: 65vh;
+    width: fit-content;
     margin: auto;
-    background-color: #d98201;
+    background-color: #0e1827;
     border-radius: 20px;
     padding: 10px;
     box-shadow: inset 0.1em 0.1em 2em 0.1em #181f39;
 }
 
 .mem-container {
+    height: 60vh;
+    width: fit-content;
+    margin: auto;
+}
 
+.mem-container img {
+    height: 60vh;
 }
 
 .controls-container {
@@ -47,13 +57,20 @@ main {
     .controls-container .description {
         margin-left: 0;
         width: min-content;
-        color: #181f39;
+        color: #a6bad7;
     }
 
     .controls-container .controls-box {
         margin-left: auto;
         margin-right: 0;
+        display: flex; 
+        column-gap: 5px;
     }
+        .controls-container .controls-box div input[type=radio] {
+
+        }
+
+
 
 footer {
     height: 10vh;
@@ -63,17 +80,39 @@ footer {
 .links-container {
     display: flex;
     column-gap: 20px;
-    height: 100%;
+    height: 5vh;
     width: fit-content;
-    margin: 0 auto;
+    margin: auto;
 }
 
     .links-container p {
-        color: #aba597;
+        color: #a6bad7;
     }
 
 .gh-link img {
     width: 5vh;
     height: 5vh;
-    filter: brightness(200%) contrast(0%) hue-rotate(48deg) saturate(90%) grayscale(100%) sepia(100%) invert(57%);
+    /*filter: brightness(200%) contrast(0%) hue-rotate(48deg) saturate(90%) grayscale(100%) sepia(100%) invert(57%);*/
 }
+
+.warning {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #181f39;
+    opacity: 0.97;
+}
+
+    .warning p {
+        width: 60%;
+        height: 60%;
+        margin: auto;
+        margin-top: 10%;
+        font-size: 36px;
+        font-family: 'Alice', serif;
+        line-height: 1.5em;
+        letter-spacing: 0.06em;
+        color: #a6bad7;
+    }
