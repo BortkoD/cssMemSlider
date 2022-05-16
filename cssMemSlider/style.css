@@ -1,0 +1,79 @@
+html {
+    scroll-behavior: smooth;
+    background-color: #181f39;
+}
+
+* {
+    margin: auto;
+    font-family: 'Chewy', cursive;
+}
+
+header {
+    height: 10vh;
+    width: 90vw;
+}
+
+    header p {
+        width: fit-content;
+        margin: auto;
+        margin-top: 20px;
+        color: #d98201;
+        font-size: 36px;
+    }
+
+main {
+    height: 70vh;
+    width: 90vw;
+}
+
+.slider-container {
+    height: 60vh;
+    width: 80vw;
+    margin: auto;
+    background-color: #d98201;
+    border-radius: 20px;
+    padding: 10px;
+    box-shadow: inset 0.1em 0.1em 2em 0.1em #181f39;
+}
+
+.mem-container {
+
+}
+
+.controls-container {
+    display: flex;
+}
+
+    .controls-container .description {
+        margin-left: 0;
+        width: min-content;
+        color: #181f39;
+    }
+
+    .controls-container .controls-box {
+        margin-left: auto;
+        margin-right: 0;
+    }
+
+footer {
+    height: 10vh;
+    width: 90vw;
+}
+
+.links-container {
+    display: flex;
+    column-gap: 20px;
+    height: 100%;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+    .links-container p {
+        color: #aba597;
+    }
+
+.gh-link img {
+    width: 5vh;
+    height: 5vh;
+    filter: brightness(200%) contrast(0%) hue-rotate(48deg) saturate(90%) grayscale(100%) sepia(100%) invert(57%);
+}
