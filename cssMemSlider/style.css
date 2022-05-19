@@ -60,10 +60,13 @@ main {
         width: inherit;
         margin: auto;
         position: absolute;
-
         background-repeat: no-repeat;
         background-size: contain;
         background-position: center;
+        opacity: 0;
+        z-index: 0;
+        transform: scale(1.5);
+        transition: transform ease-in-out .5s, opacity ease-in-out .5s;
     }
     
 .slide0 {
@@ -79,13 +82,51 @@ main {
     background-image: url("./assets/mems/mem3.jpg");
 }
 
+#mem0:checked ~ .mem-container > .slide0,
+#mem1:checked ~ .mem-container > .slide1,
+#mem2:checked ~ .mem-container > .slide2,
+#mem3:checked ~ .mem-container > .slide3 {
+    opacity: 1;
+    z-index: 1;
+    transform: scale(1);
+}
+
 .controls-container {
-    display: flex;
-    margin-left: auto;
-    margin-right: 0;
-    display: flex;
+    position: absolute;
+    margin-left: 60%;
     column-gap: 5px;
 }
+
+    .controls-container label {
+        cursor: pointer;
+        display: inline-block;
+        height: 8px;
+        margin: 0 12px;
+        position: relative;
+        width: 8px;
+        border-radius: 50%;
+        transition: background ease-in-out .5s;
+    }
+
+        .controls-container label:after {
+            border: 2px solid #ddd;
+            content: " ";
+            display: block;
+            height: 12px;
+            left: -4px;
+            position: absolute;
+            top: -4px;
+            width: 12px;
+            border-radius: 50%;
+        }
+
+        .controls-container label:hover,
+        #mem0:checked ~ .controls-container label:nth-of-type(1),
+        #mem1:checked ~ .controls-container label:nth-of-type(2),
+        #mem2:checked ~ .controls-container label:nth-of-type(3),
+        #mem3:checked ~ .controls-container label:nth-of-type(4){
+            background: #ddd;
+        }
 
 
 footer {
