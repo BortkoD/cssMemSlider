@@ -191,7 +191,15 @@ footer {
 }
 
 .gh-link img {
-    width: 5vh;
-    height: 5vh;
-    filter: brightness(200%) contrast(0%) hue-rotate(48deg) saturate(90%) grayscale(100%) sepia(100%) invert(57%);
+    width: 6vh;
+    height: 6vh;
+    margin-top: -10px;
+    filter: invert(100%);
+}
+
+.task-link img {
+    width: 6vh;
+    height: 6vh;
+    margin-top: -10px;
+    filter: brightness(200%);
 }
