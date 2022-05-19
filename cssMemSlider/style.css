@@ -7,9 +7,11 @@ html {
 }
 
 * {
-    margin: auto;
     font-family: 'Chewy', cursive;
     transition: 0.3s;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 header {
@@ -32,44 +34,58 @@ main {
 
 .slider-container {
     height: 65vh;
-    width: fit-content;
+    width: 50vw;
     margin: auto;
+    position: relative;
     background-color: #0e1827;
     border-radius: 20px;
-    padding: 10px;
+    padding: 20px;
     box-shadow: inset 0.1em 0.1em 2em 0.1em #181f39;
 }
 
-.mem-container {
-    height: 60vh;
-    width: fit-content;
-    margin: auto;
+.slider-container > input {
+    display: none;
 }
 
-.mem-container img {
-    height: 60vh;
+.mem-container {
+    height: calc(100% - 20px);
+    width: calc(100% - 20px);
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+}
+
+    .mem-container .slide {
+        height: inherit;
+        width: inherit;
+        margin: auto;
+        position: absolute;
+
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+    }
+    
+.slide0 {
+    background-image: url("./assets/mems/mem0.jpg");
+}
+.slide1 {
+    background-image: url("./assets/mems/mem1.jpg");
+}
+.slide2 {
+    background-image: url("./assets/mems/mem2.jpg");
+}
+.slide3 {
+    background-image: url("./assets/mems/mem3.jpg");
 }
 
 .controls-container {
     display: flex;
+    margin-left: auto;
+    margin-right: 0;
+    display: flex;
+    column-gap: 5px;
 }
-
-    .controls-container .description {
-        margin-left: 0;
-        width: min-content;
-        color: #a6bad7;
-    }
-
-    .controls-container .controls-box {
-        margin-left: auto;
-        margin-right: 0;
-        display: flex; 
-        column-gap: 5px;
-    }
-        .controls-container .controls-box div input[type=radio] {
-
-        }
-
 
 
 footer {

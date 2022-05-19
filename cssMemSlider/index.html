@@ -9,9 +9,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Chewy&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Alice&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -22,25 +19,21 @@
 
         <main>
             <div class="slider-container">
+                <input type="radio" id="mem0" name="mem-point" checked>
+                <input type="radio" id="mem1" name="mem-point">
+                <input type="radio" id="mem2" name="mem-point">
+                <input type="radio" id="mem3" name="mem-point">
                 <div class="mem-container">
-                    <img src="./assets/mems/mem0.jpg" alt="Alternate Text" />
+                    <div class="slide0 slide"></div>
+                    <div class="slide1 slide"></div>
+                    <div class="slide2 slide"></div>
+                    <div class="slide3 slide"></div>
                 </div>
                 <div class="controls-container">
-                    <p class="description">Description</p>
-                    <div class="controls-box">
-                        <label class="mem1">
-                            <input type="radio" id="mem1" name="mem-number" checked>
-                        </label>
-                        <label class="mem2">
-                            <input type="radio" id="mem2" name="mem-number">
-                        </label>
-                        <label class="mem3">
-                            <input type="radio" id="mem3" name="mem-number">
-                        </label>
-                        <label class="mem4">
-                            <input type="radio" id="mem4" name="mem-number">
-                        </label>
-                    </div>
+                    <label for="mem0" class="mem0 mem-button"></label>
+                    <label for="mem1" class="mem1 mem-button"></label>
+                    <label for="mem2" class="mem2 mem-button"></label>
+                    <label for="mem3" class="mem3 mem-button"></label>
                 </div>
             </div>
         </main>
