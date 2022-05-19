@@ -24,12 +24,13 @@ header {
         margin: auto;
         margin-top: 20px;
         color: #a6bad7;
-        font-size: 36px;
+        font-size: 48px;
     }
 
 main {
     height: 70vh;
     width: 90vw;
+    margin: auto;
 }
 
 .slider-container {
@@ -60,40 +61,72 @@ main {
         width: inherit;
         margin: auto;
         position: absolute;
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position: center;
         opacity: 0;
         z-index: 0;
-        transform: scale(1.5);
+        transform: translateX(-100%);
         transition: transform ease-in-out .5s, opacity ease-in-out .5s;
     }
-    
+
 .slide0 {
+    height: inherit;
+    width: inherit;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
     background-image: url("./assets/mems/mem0.jpg");
 }
 .slide1 {
+    height: inherit;
+    width: inherit;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
     background-image: url("./assets/mems/mem1.jpg");
 }
 .slide2 {
+    height: inherit;
+    width: inherit;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
     background-image: url("./assets/mems/mem2.jpg");
 }
 .slide3 {
+    height: inherit;
+    width: inherit;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
     background-image: url("./assets/mems/mem3.jpg");
 }
 
-#mem0:checked ~ .mem-container > .slide0,
-#mem1:checked ~ .mem-container > .slide1,
-#mem2:checked ~ .mem-container > .slide2,
-#mem3:checked ~ .mem-container > .slide3 {
+#mem0:checked ~ .mem-container > .mov-slide0,
+#mem1:checked ~ .mem-container > .mov-slide1,
+#mem2:checked ~ .mem-container > .mov-slide2,
+#mem3:checked ~ .mem-container > .mov-slide3 {
     opacity: 1;
     z-index: 1;
     transform: scale(1);
 }
 
+.under-img-block {
+    display: flex;
+}
+
+.slide > .desc {
+        position: relative;
+        margin-top: 10px;
+        color: white;
+        opacity: 1;
+        transition: transform ease-in-out .5s, opacity ease-in-out .5s;
+    }
+
 .controls-container {
-    position: absolute;
-    margin-left: 60%;
+    display: flex;
+    flex-wrap: nowrap;
+    position: relative;
+    width: 150px;
+    margin-left: auto;
     column-gap: 5px;
 }
 
